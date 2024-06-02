@@ -1,0 +1,12 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "eslint": "^9.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
