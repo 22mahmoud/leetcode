@@ -1,5 +1,5 @@
-import { minSubArrayLen } from ".";
-import { large } from "./large";
+import { minSubArrayLen } from "./index.js";
+import { large } from "./large.js";
 
 describe.each([
   { target: 11, array: [1, 2, 3, 4, 5], expected: 3 },

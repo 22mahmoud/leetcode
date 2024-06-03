@@ -17,4 +17,3 @@ function minSubArrayLen(target: number = 0, nums: number[]): number {
 }
 
 export { minSubArrayLen };
-

@@ -1,4 +1,4 @@
-import { lengthOfLongestSubstring } from ".";
+import { lengthOfLongestSubstring } from "./index.js";
 
 describe.each([
   { target: " ", expected: 1 },

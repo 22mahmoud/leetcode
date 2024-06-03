@@ -1,4 +1,4 @@
-import { twoSum } from ".";
+import { twoSum } from "./index.js";
 
 describe.each([
   { target: 9, array: [2, 7, 11, 15], expected: [1, 2] },
