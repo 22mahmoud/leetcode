@@ -1,21 +1,22 @@
 function productExceptSelf(nums: number[]): number[] {
-  let result: number[] = Array(nums.length).fill(1);
+  let len = nums.length;
+  let result: number[] = Array(len).fill(1);
 
-  let n = 1;
-  for (let i = 0; i < nums.length; i++) {
-    result[i] *= i == 0 ? 1 : nums[i - 1] * n;
-    n *= result[i] * nums[i];
+  let x = 1;
+
+  for (let i = 0; i < len; i++) {
+    result[i] = x;
+    x *= nums[i];
   }
 
-  n = 1;
-  for (let i = nums.length - 1; i >= 0; i--) {
-    result[i] *= i == nums.length - 1 ? 1 : nums[i + 1] * n;
-    n *= result[i] * nums[i];
+  x = 1;
+  for (let i = len - 1; i >= 0; i--) {
+    let product = result[i] * x;
+    result[i] = Object.is(-0, product) ? 0 : product;
+    x *= nums[i];
   }
 
   return result;
 }
-
-productExceptSelf([1, 2, 3, 4]);
 
 export { productExceptSelf };
