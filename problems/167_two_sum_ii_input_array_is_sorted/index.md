@@ -8,14 +8,14 @@ tags:
   - two-pointers
 ---
 
-# 0167. Two Sum II - Input Array Is Sorted
+## 0167. Two Sum II - Input Array Is Sorted
 
-## Optimal
+### Optimal
 
 ```.ts {include="index.ts"}
 ```
 
-## Brute-Force
+### Brute-Force
 
 ```.ts {include="bruteforce.ts"}
 ```

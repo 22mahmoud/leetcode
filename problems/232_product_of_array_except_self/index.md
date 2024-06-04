@@ -8,14 +8,14 @@ tags:
   - prefix-sum
 ---
 
-# 0238. Product of Array Except Self
+## 0238. Product of Array Except Self
 
-## Optimal
+### Optimal
 
 ```.ts {include="index.ts"}
 ```
 
-## Brute-Force
+### Brute-Force
 
 ```.ts {include="bruteforce.ts"}
 ```

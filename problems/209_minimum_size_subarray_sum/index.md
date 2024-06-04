@@ -9,14 +9,14 @@ tags:
   - sliding-window
 ---
 
-# 0209. Minimum Size Subarray Sum
+## 0209. Minimum Size Subarray Sum
 
-## Optimal
+### Optimal
 
 ```.ts {include="index.ts"}
 ```
 
-## Brute-Force
+### Brute-Force
 
 ```.ts {include="bruteforce.ts"}
 ```

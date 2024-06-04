@@ -8,9 +8,9 @@ tags:
   - sliding-window
 ---
 
-# 0003. Longest Substring Without Repeating Characters
+## 0003. Longest Substring Without Repeating Characters
 
-## Optimal
+### Optimal
 
 ```.ts {include="index.ts"}
 ```

@@ -8,14 +8,14 @@ tags:
   - two-pointers
 ---
 
-# 0121. Best Time to Buy and Sell Stock
+## 0121. Best Time to Buy and Sell Stock
 
-## Optimal
+### Optimal
 
 ```.ts {include="index.ts"}
 ```
 
-## Brute-Force
+### Brute-Force
 
 ```.ts {include="bruteforce.ts"}
 ```
