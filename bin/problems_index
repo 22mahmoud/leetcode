@@ -1,0 +1,25 @@
+#!/bin/bash
+
+base_dir="problems"
+final_conent=""
+
+# Iterate over each timestamp directory
+for filename in $(ls -1 "$base_dir" | sort -n); do
+  if [ -d "$base_dir/$filename" ]; then
+    title=$(yq --front-matter=extract '.title' "$base_dir/$filename/index.md")
+    id=$(yq --front-matter=extract '.id' "$base_dir/$filename/index.md")
+
+    final_conent=$(printf "%s\n%s" "- [$id. $title]($filename)" "$final_conent")
+  fi
+done
+
+cat <<EOF >problems/index.md
+---
+title-prefix: Leetcode - Problems
+---
+
+# Leetcode Problems
+
+$(printf "%s" "$final_conent")
+EOF
+
