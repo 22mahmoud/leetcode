@@ -4,5 +4,5 @@ title-prefix: Leetcode
 
 # Leetcode
 
-- [/leetcode/problems](Problems)
-- [/leetcode/logs](Logs)
+- [Problems](/leetcode/problems)
+- [Logs](/leetcode/logs)
