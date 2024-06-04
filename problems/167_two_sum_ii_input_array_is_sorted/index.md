@@ -8,5 +8,5 @@ tags:
 ---
 
 
-```.ts {include="src/problems/167_two_sum_ii_input_array_is_sorted/index.ts"}
+```.ts {include="./index.ts"}
 ```
