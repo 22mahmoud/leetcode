@@ -1,17 +1,27 @@
 #!/bin/bash
 
 base_dir="problems"
-final_conent=""
+final_content=""
+temp_file=$(mktemp)
+sorted_file=$(mktemp)
 
-# Iterate over each timestamp directory
-for filename in $(ls -1 "$base_dir" | sort -n); do
+for filename in $(ls "$base_dir" | sort -n); do
   if [ -d "$base_dir/$filename" ]; then
-    title=$(yq --front-matter=extract '.title' "$base_dir/$filename/index.md")
+    title=$(yq --front-matter=extract '.title-prefix' "$base_dir/$filename/index.md")
     id=$(yq --front-matter=extract '.id' "$base_dir/$filename/index.md")
+    date=$(yq --front-matter=extract '.date' "$base_dir/$filename/index.md")
 
-    final_conent=$(printf "%s\n%s" "- [$id. $title]($filename)" "$final_conent")
+    echo "$date|$id|$title|$filename" >>"$temp_file"
   fi
 done
+
+sort "$temp_file" >"$sorted_file"
+sort "$temp_file" > sorted
+
+while IFS="|" read -r date id title filename; do
+  final_content=$(printf "%s\n%s" "- [$id. $title]($filename '$date')" "$final_content")
+done <"$sorted_file"
+
 
 cat <<EOF >problems/index.md
 ---
@@ -20,6 +30,5 @@ title-prefix: Leetcode - Problems
 
 # Leetcode Problems
 
-$(printf "%s" "$final_conent")
+$(printf "%s" "$final_content")
 EOF
-
