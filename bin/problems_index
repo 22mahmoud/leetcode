@@ -19,7 +19,7 @@ sort "$temp_file" >"$sorted_file"
 sort "$temp_file" > sorted
 
 while IFS="|" read -r date id title filename; do
-  final_content=$(printf "%s\n%s" "- [$id. $title]($filename '$date')" "$final_content")
+  final_content=$(printf "%s\n%s" "- [$id. $title]($filename)" "$final_content")
 done <"$sorted_file"
 
 
