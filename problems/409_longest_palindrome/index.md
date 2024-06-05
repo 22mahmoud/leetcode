@@ -12,5 +12,5 @@ tags:
 
 ### Optimal
 
-```.ts {include="index.ts"}
+```ts {include="index.ts"}
 ```

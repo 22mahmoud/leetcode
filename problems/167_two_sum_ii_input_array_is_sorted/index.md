@@ -12,10 +12,10 @@ tags:
 
 ### Optimal
 
-```.ts {include="index.ts"}
+```ts {include="index.ts"}
 ```
 
 ### Brute-Force
 
-```.ts {include="bruteforce.ts"}
+```ts {include="bruteforce.ts"}
 ```
