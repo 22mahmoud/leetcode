@@ -1,0 +1,29 @@
+name: Push updates in maw.sh Repo
+
+on: [push]
+
+jobs:
+  create-and-merge-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout leetcode repo
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Clone blog repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/22mahmoud/maw.sh.git
+          cd maw.sh
+          git submodule update --init --recursive
+
+      - name: Update submodule
+        run: |
+          cd maw.sh
+          git submodule update --remote --merge
+          git commit -am "Update submodule"
+          git push origin master
