@@ -1,5 +1,5 @@
 ---
-date: Jum 03, 2024
+date: Jun 03, 2024
 submission: https://leetcode.com/problems/product-of-array-except-self/submissions/1277840199
 id: 0238
 slug: product-of-array-except-self

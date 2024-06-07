@@ -1,5 +1,5 @@
 ---
-date: Jum 02, 2024
+date: Jun 02, 2024
 submission: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/1277852550
 id: 0167
 slug: two-sum-ii-input-array-is-sorted

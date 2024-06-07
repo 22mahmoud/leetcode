@@ -1,5 +1,5 @@
 ---
-date: Jum 02, 2024
+date: Jun 02, 2024
 submission: https://leetcode.com/problems/minimum-size-subarray-sum/submissions/1275513577
 id: 0209
 slug: minimum-size-subarray-sum

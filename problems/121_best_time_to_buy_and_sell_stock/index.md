@@ -1,5 +1,5 @@
 ---
-date: Jum 03, 2024
+date: Jun 03, 2024
 submission: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/1276682862
 id: 0121
 slug: best-time-to-buy-and-sell-stock
