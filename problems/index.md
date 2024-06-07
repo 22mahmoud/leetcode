@@ -5,6 +5,7 @@ title-prefix: Leetcode - Problems
 # Leetcode Problems
 
 - Jun 07, 2024: [0846. Hand of Straights](846_hand_of_straights)
+- Jun 06, 2024: [0053. Maximum Subarray](53_maximum_subarray)
 - Jun 05, 2024: [1002. Find Common Characters](1002_find_common_characters)
 - Jun 04, 2024: [0409. Longest Palindrome](409_longest_palindrome)
 - Jun 03, 2024: [0238. Product of Array Except Self](232_product_of_array_except_self)

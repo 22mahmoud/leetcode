@@ -1,12 +1,13 @@
 function maxSubArray(nums: number[]): number {
-  let result = 0;
-  nums.sort();
+  let max = nums[0];
+  let current = nums[0];
 
-  for (let i = 0; i < nums.length; i++) {
-    result = Math.max(nums[i] + result, result);
+  for (let i = 1; i < nums.length; i++) {
+    current = Math.max(nums[i], current + nums[i]);
+    max = Math.max(current, max);
   }
 
-  return result;
+  return max;
 }
 
 export { maxSubArray };
