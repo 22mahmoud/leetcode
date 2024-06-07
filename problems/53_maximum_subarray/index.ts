@@ -1,9 +1,9 @@
 function maxSubArray(nums: number[]): number {
   let max = nums[0];
-  let current = nums[0];
+  let current = 0;
 
-  for (let i = 1; i < nums.length; i++) {
-    current = Math.max(nums[i], current + nums[i]);
+  for (const x of nums) {
+    current = Math.max(x, current + x);
     max = Math.max(current, max);
   }
 
