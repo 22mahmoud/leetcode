@@ -39,7 +39,4 @@ function commonChars(words: string[]): string[] {
   return result;
 }
 
-console.log(commonChars(["bella", "label", "roller"]));
-// console.log(commonChars(["cool", "lock", "cook"]));
-
 export { commonChars };

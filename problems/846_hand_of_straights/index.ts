@@ -1,38 +1,24 @@
-// isPossibleDivide
-function isNStraightHand(hand: number[], gs: number): boolean {
-  if (hand.length % gs !== 0) return false;
+function isNStraightHand(hand: number[], groupSize: number): boolean {
+  if (hand.length % groupSize !== 0) return false;
+
   hand.sort((a, b) => a - b);
 
-  let result: number[][] = [[]];
-  let stack: number[] = [];
-  let idx = 0;
-  let j = 0;
+  const counter: Record<number, number> = {};
 
-  while (hand.length > 0) {
-    if (result[idx]?.length === gs) {
-      idx++;
-      result[idx] = [];
-      j = 0;
-      hand = [...stack, ...hand];
-      stack = [];
-    }
+  for (const card of hand) {
+    counter[card] = (counter[card] || 0) + 1;
+  }
 
-    const prev = result[idx][j - 1];
+  for (const card of hand) {
+    if (counter[card] === 0) continue;
 
-    const current = hand.shift()!;
-    if (prev === undefined || prev + 1 === current) {
-      result[idx].push(current);
-      j++;
-    } else {
-      stack.push(current);
+    for (let i = 0; i < groupSize; i++) {
+      if (!counter[card + i]) return false;
+      counter[card + i]--;
     }
   }
 
-  return !stack.length && result.every((x) => x.length === gs);
+  return true;
 }
-
-console.log(isNStraightHand([1, 1, 3, 6, 2, 3, 4, 7, 8], 3));
-// isNStraightHand([2, 1, 2, 4, 1, 3, 3, 3], 2);
-// isNStraightHand([8, 10, 12], 4);
 
 export { isNStraightHand };

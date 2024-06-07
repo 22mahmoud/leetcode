@@ -19,6 +19,4 @@ function longestPalindrome(s: string): number {
   return result !== len ? result + 1 : result;
 }
 
-console.log(longestPalindrome("abccccdd"));
-
 export { longestPalindrome };
