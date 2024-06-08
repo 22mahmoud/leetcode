@@ -1,0 +1,29 @@
+name: Generate and Commit File
+
+on: [push]
+
+jobs:
+  generate-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      
+    - name: Run script to generate file
+      run: |
+        chmod +x ./bin/problems_index
+        ./bin/problems_index
+
+    - name: Commit and push changes
+      run: |
+        git add .
+        git commit -m 'Add generated index.md'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

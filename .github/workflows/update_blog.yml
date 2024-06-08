@@ -1,6 +1,10 @@
 name: Update Submodule in maw.sh
 
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Generate and Commit File"]
+    types:
+      - completed
 
 jobs:
   update-submodule:
