@@ -8,6 +8,8 @@ tags:
   - hash-table
 ---
 
+test
+
 ## 1002. Find Common Characters
 
 ### Optimal
