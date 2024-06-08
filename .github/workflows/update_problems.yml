@@ -20,6 +20,11 @@ jobs:
         chmod +x ./bin/problems_index
         ./bin/problems_index
 
+    - name: Check for changes
+      id: check_changes
+      run: |
+        git diff --exit-code || exit 0
+
     - name: Commit and push changes
       run: |
         git add .
