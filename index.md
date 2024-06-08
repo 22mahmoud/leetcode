@@ -4,6 +4,7 @@ title-prefix: Leetcode
 
 # Leetcode Problems
 
+- Jun 09, 2024: [0523. Continuous Subarray Sum](problems/523_continuous_subarray_sum)
 - Jun 08, 2024: [0053. Maximum Subarray](problems/53_maximum_subarray)
 - Jun 07, 2024: [0846. Hand of Straights](problems/846_hand_of_straights)
 - Jun 05, 2024: [1002. Find Common Characters](problems/1002_find_common_characters)
