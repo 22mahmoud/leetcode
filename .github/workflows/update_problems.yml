@@ -1,12 +1,6 @@
 name: Generate and Commit File
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'problem/**'
-  workflow_dispatch:
+on: [push]
 
 jobs:
   generate-and-commit:
