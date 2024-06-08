@@ -15,17 +15,19 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
       
-    - name: Run script to generate file
-      run: |
-        chmod +x ./bin/problems_index
-        ./bin/problems_index
-
     - name: Check for changes
-      id: check_changes
+      id: changes
       run: |
-        git diff --exit-code || exit 0
+        if git diff --quiet; then
+          echo "No changes to commit"
+          echo "::set-output name=changes::false"
+        else
+          echo "Changes detected"
+          echo "::set-output name=changes::true"
+        fi
 
     - name: Commit and push changes
+      if: steps.changes.outputs.changes == 'true'
       run: |
         git add .
         git commit -m 'Add generated index.md'
