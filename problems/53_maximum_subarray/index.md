@@ -5,6 +5,7 @@ id: 0053
 slug: maximum-subarray
 title-prefix: Maximum Subarray
 tags: 
+  - kadane-algorithm
 ---
 
 ## 0053. Maximum Subarray
