@@ -1,5 +1,5 @@
 function minSubArrayLen(target: number, nums: number[]): number {
-  let answers: number[] = [];
+  const answers: number[] = [];
 
   for (let x = 0; x < nums.length; x++) {
     let acc = 0;

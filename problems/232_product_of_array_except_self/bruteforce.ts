@@ -1,5 +1,5 @@
 function productExceptSelf(nums: number[]): number[] {
-  let result: number[] = Array.from({ length: nums.length }).map((_) => 1);
+  const result: number[] = Array.from({ length: nums.length }).map(() => 1);
 
   for (let i = 0; i < nums.length; i++) {
     for (let j = 0; j < nums.length; j++) {
@@ -13,4 +13,3 @@ function productExceptSelf(nums: number[]): number[] {
 }
 
 export { productExceptSelf };
-

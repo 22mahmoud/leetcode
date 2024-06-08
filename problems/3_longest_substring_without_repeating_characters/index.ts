@@ -1,7 +1,7 @@
 function lengthOfLongestSubstring(s: string): number {
   let l = 0;
   let r = 0;
-  let result = new Set();
+  const result = new Set();
   let len = 0;
 
   while (r < s.length) {

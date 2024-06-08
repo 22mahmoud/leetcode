@@ -1,5 +1,5 @@
 function longestPalindrome(s: string): number {
-  let len = s.length;
+  const len = s.length;
   if (len === 1) return 1;
   if (len === 0) return 0;
 
