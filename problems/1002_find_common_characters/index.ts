@@ -7,7 +7,7 @@ function commonChars(words: string[]): string[] {
   const result: string[] = [];
 
   for (let i = 0; i < words[0].length; i++) {
-    const code = words[0][i].charCodeAt(0) - "a".charCodeAt(0);
+    const code = words[0][i].charCodeAt(0) - 'a'.charCodeAt(0);
     prev[code]++;
   }
 
@@ -16,7 +16,7 @@ function commonChars(words: string[]): string[] {
     for (let i = 0; i < 26; i++) current[i] = 0;
 
     for (let j = 0; j < words[i].length; j++) {
-      const code = words[i][j].charCodeAt(0) - "a".charCodeAt(0);
+      const code = words[i][j].charCodeAt(0) - 'a'.charCodeAt(0);
       current[code]++;
     }
 
@@ -29,7 +29,7 @@ function commonChars(words: string[]): string[] {
 
   for (let i = 0; i < 26; i++) {
     const times = prev[i];
-    const char = String.fromCharCode(i + "a".charCodeAt(0));
+    const char = String.fromCharCode(i + 'a'.charCodeAt(0));
 
     for (let j = 0; j < times; j++) {
       result.push(char);

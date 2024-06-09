@@ -12,7 +12,7 @@ function twoSum(numbers: number[], target: number): number[] {
     if (sum < target) l++;
   }
 
-  throw new Error("No Two Sum solution");
+  throw new Error('No Two Sum solution');
 }
 
 export { twoSum };
