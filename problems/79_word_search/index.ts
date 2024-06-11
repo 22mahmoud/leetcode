@@ -45,15 +45,5 @@ function exist(board: string[][], word: string): boolean {
   return false;
 }
 
-console.log(
-  exist(
-    [
-      ['A', 'B', 'C', 'E'],
-      ['S', 'F', 'C', 'S'],
-      ['A', 'D', 'E', 'E'],
-    ],
-    'SEE',
-  ),
-);
-
 export { exist };
+
