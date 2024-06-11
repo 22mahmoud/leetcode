@@ -15,6 +15,4 @@ function checkSubarraySum(nums: number[], k: number): boolean {
   return false;
 }
 
-checkSubarraySum([23, 2, 4, 6, 7], 6);
-
 export { checkSubarraySum };

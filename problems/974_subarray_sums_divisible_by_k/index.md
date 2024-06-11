@@ -5,6 +5,7 @@ id: 0974
 slug: subarray-sums-divisible-by-k
 title-prefix: Subarray Sums Divisible by K
 tags: 
+  - prefix-sum
 ---
 
 ## 0974. Subarray Sums Divisible by K

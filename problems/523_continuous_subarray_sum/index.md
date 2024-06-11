@@ -5,6 +5,7 @@ id: 0523
 slug: continuous-subarray-sum
 title-prefix: Continuous Subarray Sum
 tags: 
+  - prefix-sum
 ---
 
 ## 0523. Continuous Subarray Sum
