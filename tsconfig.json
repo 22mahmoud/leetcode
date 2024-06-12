@@ -3,6 +3,5 @@
   "compilerOptions": {
     "types": ["vitest/globals"]
   },
-  "include": ["problems"],
   "exclude": ["node_modules"]
 }
