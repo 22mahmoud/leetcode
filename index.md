@@ -4,6 +4,7 @@ title-prefix: Leetcode
 
 # Leetcode Problems
 
+- Jun 13, 2024: [0022. Generate Parentheses](problems/22_generate_parentheses)
 - Jun 12, 2024: [0078. Subsets](problems/78_subsets)
 - Jun 11, 2024: [0079. Word Search](problems/79_word_search)
 - Jun 11, 2024: [0017. Letter Combinations of a Phone Number](problems/17_letter_combinations_of_a_phone_number)
