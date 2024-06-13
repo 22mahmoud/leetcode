@@ -45,5 +45,8 @@ description: |
 
 ### Optimal
 
+So, to solve the maximum subarray problem, we have to use [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm) by keep track of 
+the latest max and current max until we get finish the array.
+
 ```ts {include="index.ts"}
 ```
