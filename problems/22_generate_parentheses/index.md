@@ -1,6 +1,6 @@
 ---
 date: Jun 13, 2024
-submission: 
+submission: ""
 id: 0022
 slug: generate-parentheses
 title-prefix: Generate Parentheses
