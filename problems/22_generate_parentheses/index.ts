@@ -20,6 +20,4 @@ function generateParenthesis(n: number): string[] {
   return result;
 }
 
-generateParenthesis(3);
-
 export { generateParenthesis };
