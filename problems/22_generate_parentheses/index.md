@@ -1,6 +1,6 @@
 ---
 date: Jun 13, 2024
-submission: https://leetcode.com/problems/generate-parentheses/submissions
+submission: https://leetcode.com/problems/generate-parentheses/submissions/1287502655
 id: 0022
 slug: generate-parentheses
 title-prefix: Generate Parentheses
