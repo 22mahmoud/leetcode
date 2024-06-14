@@ -33,7 +33,7 @@ val() {
 }
 
 update_metadata() {
-  escaped_value=$(printf '%s' "$3" | sed 's/<p>&nbsp;<\/p>//g' | sed 's/"/\\"/g' | sed 's/&/\\&/g')
+  escaped_value=$(printf '%s' "$3" | sed 's/<p>&nbsp;<\/p>//g' | sed 's/"/\\"/g') 
 
   yq --front-matter="process" -i ".$2 = \"$escaped_value\"" "$1"
 }
