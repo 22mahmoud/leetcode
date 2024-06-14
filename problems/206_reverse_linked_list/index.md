@@ -2,6 +2,8 @@
 date: Jun 15, 2024
 submission: https://leetcode.com/problems/reverse-linked-list/submissions/1288548432
 tags:
+  - linked-list
+  - recursion
 id: 0206
 slug: reverse-linked-list
 title-prefix: Reverse Linked List
