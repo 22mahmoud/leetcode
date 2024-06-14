@@ -4,6 +4,7 @@ title-prefix: Leetcode
 
 # Leetcode Problems
 
+- : [0006. Zigzag Conversion](problems/6_zigzag_conversion)
 - Jun 13, 2024: [0022. Generate Parentheses](problems/22_generate_parentheses)
 - Jun 12, 2024: [0078. Subsets](problems/78_subsets)
 - Jun 11, 2024: [0079. Word Search](problems/79_word_search)
