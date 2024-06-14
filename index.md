@@ -4,6 +4,7 @@ title-prefix: Leetcode
 
 # Leetcode Problems
 
+- Jun 15, 2024: [0206. Reverse Linked List](problems/206_reverse_linked_list)
 - Jun 13, 2024: [0022. Generate Parentheses](problems/22_generate_parentheses)
 - Jun 12, 2024: [0078. Subsets](problems/78_subsets)
 - Jun 11, 2024: [0079. Word Search](problems/79_word_search)
