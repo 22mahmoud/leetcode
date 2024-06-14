@@ -12,6 +12,8 @@ query='{
     content
     questionId
     title
+    exampleTestcaseList
+    metaData
     codeSnippets {
       langSlug
       code
@@ -22,20 +24,18 @@ query='{
 }'
 
 fetch_game_data() {
-  response=$(jq -cMn --arg query "$query" '{"query":$query}' | tr -d '\n' |
-    xargs -0 curl -s 'https://leetcode.com/graphql/' -H 'content-type: application/json' -d)
-
-  echo "$response"
+  jq -cMn --arg query "$query" '{"query":$query}' | tr -d '\n' | xargs -0 \
+    curl -s 'https://leetcode.com/graphql/' -H 'content-type: application/json' -d
 }
 
 val() {
-  echo "$1" | yq -r "$2"
+  echo "$response" | yq -r "$1"
 }
 
 update_metadata() {
-  escaped_value=$(printf '%s' "$3" | sed 's/<p>&nbsp;<\/p>//g' | sed 's/"/\\"/g') 
+  escaped_value=$(printf '%s' "$2" | sed 's/<p>&nbsp;<\/p>//g' | sed 's/"/\\"/g')
 
-  yq --front-matter="process" -i ".$2 = \"$escaped_value\"" "$1"
+  yq --front-matter="process" -i ".$1 = \"$escaped_value\"" "$md_file"
 }
 
 slugify() {
@@ -43,12 +43,6 @@ slugify() {
 }
 
 create_markdown() {
-  dir_name="$1"
-  md_file="$2"
-  title_slug="$3"
-
-  mkdir -p "$dir_name"
-
   if [ ! -f "$md_file" ]; then
     cat <<EOF >"$md_file"
 ---
@@ -62,12 +56,9 @@ EOF
 }
 
 create_ts_file() {
-  ts_file="$1"
-  ts_code="$2"
-
   if [ ! -f "$ts_file" ]; then
     cat <<EOF >"$ts_file"
-export $ts_code
+export $code_ts
 EOF
     echo "index.ts created successfully!"
   fi
@@ -75,9 +66,6 @@ EOF
 }
 
 create_ts_test_file() {
-  test_file="$1"
-  function_name="$2"
-
   if [ ! -f "$test_file" ]; then
     cat <<EOF >"$test_file"
 import { $function_name } from './index.js';
@@ -103,11 +91,11 @@ main() {
     exit 1
   fi
 
-  content=$(val "$response" '.data.question.content')
-  id=$(val "$response" '.data.question.questionId')
-  title=$(val "$response" '.data.question.title')
-  title_slug=$(val "$response" '.data.question.titleSlug')
-  code_ts=$(val "$response" '.data.question.codeSnippets[] | select(.langSlug=="typescript") | .code')
+  content=$(val '.data.question.content')
+  id=$(val '.data.question.questionId')
+  title=$(val '.data.question.title')
+  title_slug=$(val '.data.question.titleSlug')
+  code_ts=$(val '.data.question.codeSnippets[] | select(.langSlug=="typescript") | .code')
   function_name=$(echo "$code_ts" | grep -oP 'function\s+\K\w+')
 
   dir_name=problems/"$id"_$(slugify "$title_slug")
@@ -115,14 +103,16 @@ main() {
   ts_file="$dir_name"/index.ts
   test_file="$dir_name"/index.test.ts
 
-  create_markdown "$dir_name" "$md_file" "$title_slug"
-  update_metadata "$md_file" "id" "$(printf "%04d" "$id")"
-  update_metadata "$md_file" "slug" "$title_slug"
-  update_metadata "$md_file" "title-prefix" "$title"
-  update_metadata "$md_file" "description" "$content"
+  mkdir -p "$dir_name"
 
-  create_ts_file "$ts_file" "$code_ts"
-  create_ts_test_file "$test_file" "$function_name"
+  create_markdown
+  create_ts_file
+  create_ts_test_file
+
+  update_metadata "id" "$(printf "%04d" "$id")"
+  update_metadata "slug" "$title_slug"
+  update_metadata "title-prefix" "$title"
+  update_metadata "description" "$content"
 }
 
 main "$@"
