@@ -1,0 +1,128 @@
+#!/bin/sh
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 <slug>"
+  exit 1
+fi
+
+slug="$1"
+
+query='{
+  question(titleSlug: "'"$slug"'") {
+    content
+    questionId
+    title
+    codeSnippets {
+      langSlug
+      code
+    }
+    titleSlug
+    difficulty
+  }
+}'
+
+fetch_game_data() {
+  response=$(jq -cMn --arg query "$query" '{"query":$query}' | tr -d '\n' |
+    xargs -0 curl -s 'https://leetcode.com/graphql/' -H 'content-type: application/json' -d)
+
+  echo "$response"
+}
+
+val() {
+  echo "$1" | yq -r "$2"
+}
+
+update_metadata() {
+  escaped_value=$(printf '%s' "$3" | sed 's/<p>&nbsp;<\/p>//g' | sed 's/"/\\"/g' | sed 's/&/\\&/g')
+
+  yq --front-matter="process" -i ".$2 = \"$escaped_value\"" "$1"
+}
+
+slugify() {
+  echo "$1" | sed "s/-/_/g"
+}
+
+create_markdown() {
+  dir_name="$1"
+  md_file="$2"
+  title_slug="$3"
+
+  mkdir -p "$dir_name"
+
+  if [ ! -f "$md_file" ]; then
+    cat <<EOF >"$md_file"
+---
+date: 
+submission: https://leetcode.com/problems/$title_slug/submissions/
+tags:
+---
+EOF
+    echo "index.md created successfully!"
+  fi
+}
+
+create_ts_file() {
+  ts_file="$1"
+  ts_code="$2"
+
+  if [ ! -f "$ts_file" ]; then
+    cat <<EOF >"$ts_file"
+export $ts_code
+EOF
+    echo "index.ts created successfully!"
+  fi
+
+}
+
+create_ts_test_file() {
+  test_file="$1"
+  function_name="$2"
+
+  if [ ! -f "$test_file" ]; then
+    cat <<EOF >"$test_file"
+import { $function_name } from './index.js';
+
+describe.each([
+  { case: '', expected: 5 },
+])('describe function $function_name(\$case)', ({ case, expected }) => {
+  test(\`Returns \${expected}\`, () => {
+    expect($function_name(case)).toBe(expected);
+  });
+});
+EOF
+    echo "index.test.ts created successfully!"
+  fi
+
+}
+
+main() {
+  response=$(fetch_game_data)
+
+  if [ "$(echo "$response" | yq -r '.data.question')" = "null" ]; then
+    echo "Error: slug '$slug' not found."
+    exit 1
+  fi
+
+  content=$(val "$response" '.data.question.content')
+  id=$(val "$response" '.data.question.questionId')
+  title=$(val "$response" '.data.question.title')
+  title_slug=$(val "$response" '.data.question.titleSlug')
+  code_ts=$(val "$response" '.data.question.codeSnippets[] | select(.langSlug=="typescript") | .code')
+  function_name=$(echo "$code_ts" | grep -oP 'function\s+\K\w+')
+
+  dir_name=problems/"$id"_$(slugify "$title_slug")
+  md_file="$dir_name"/index.md
+  ts_file="$dir_name"/index.ts
+  test_file="$dir_name"/index.test.ts
+
+  create_markdown "$dir_name" "$md_file" "$title_slug"
+  update_metadata "$md_file" "id" "$(printf "%04d" "$id")"
+  update_metadata "$md_file" "slug" "$title_slug"
+  update_metadata "$md_file" "title-prefix" "$title"
+  update_metadata "$md_file" "description" "$content"
+
+  create_ts_file "$ts_file" "$code_ts"
+  create_ts_test_file "$test_file" "$function_name"
+}
+
+main "$@"
