@@ -10,7 +10,7 @@ slug="$1"
 query='{
   question(titleSlug: "'"$slug"'") {
     content
-    questionId
+    questionFrontendId
     title
     exampleTestcaseList
     metaData
@@ -92,7 +92,7 @@ main() {
   fi
 
   content=$(val '.data.question.content')
-  id=$(val '.data.question.questionId')
+  id=$(val '.data.question.questionFrontendId')
   title=$(val '.data.question.title')
   title_slug=$(val '.data.question.titleSlug')
   code_ts=$(val '.data.question.codeSnippets[] | select(.langSlug=="typescript") | .code')
