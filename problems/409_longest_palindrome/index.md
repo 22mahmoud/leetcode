@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/longest-palindrome/submissions/1277911
 id: 0409
 slug: longest-palindrome
 title-prefix: Longest Palindrome
-tags: 
+tags:
   - hash-table
 description: |
   <p>Given a string <code>s</code> which consists of lowercase or uppercase letters, return the length of the <strong>longest <span data-keyword="palindrome-string">palindrome</span></strong>&nbsp;that can be built with those letters.</p>
@@ -38,4 +38,5 @@ description: |
 ### Optimal
 
 ```ts {include="index.ts"}
+
 ```

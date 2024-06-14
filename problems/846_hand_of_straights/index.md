@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/hand-of-straights/submissions/12800037
 id: 0846
 slug: hand-of-straights
 title-prefix: Hand of Straights
-tags: 
+tags:
   - hash-map
   - min-heap
   - heaps
@@ -44,4 +44,5 @@ description: |
 ### With Sorted Array + Hash-Map
 
 ```ts {include="index.ts"}
+
 ```

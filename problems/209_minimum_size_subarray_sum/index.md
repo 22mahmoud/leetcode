@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/minimum-size-subarray-sum/submissions/
 id: 0209
 slug: minimum-size-subarray-sum
 title-prefix: Minimum Size Subarray Sum
-tags: 
+tags:
   - two-pointers
   - sliding-window
 description: |
@@ -46,9 +46,11 @@ description: |
 ### Optimal
 
 ```ts {include="index.ts"}
+
 ```
 
 ### Brute-Force
 
 ```ts {include="bruteforce.ts"}
+
 ```

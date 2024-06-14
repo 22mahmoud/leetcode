@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 id: 0017
 slug: letter-combinations-of-a-phone-number
 title-prefix: Letter Combinations of a Phone Number
-tags: 
+tags:
   - backtracking
 description: |
   <p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent. Return the answer in <strong>any order</strong>.</p>
@@ -43,4 +43,5 @@ description: |
 ### Optimal (Backtracking)
 
 ```ts {include="index.ts"}
+
 ```

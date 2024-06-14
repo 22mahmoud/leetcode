@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submi
 id: 0167
 slug: two-sum-ii-input-array-is-sorted
 title-prefix: Two Sum II - Input Array Is Sorted
-tags: 
+tags:
   - two-pointers
 description: |
   <p>Given a <strong>1-indexed</strong> array of integers <code>numbers</code> that is already <strong><em>sorted in non-decreasing order</em></strong>, find two numbers such that they add up to a specific <code>target</code> number. Let these two numbers be <code>numbers[index<sub>1</sub>]</code> and <code>numbers[index<sub>2</sub>]</code> where <code>1 &lt;= index<sub>1</sub> &lt; index<sub>2</sub> &lt;= numbers.length</code>.</p>
@@ -53,9 +53,11 @@ description: |
 ### Optimal
 
 ```ts {include="index.ts"}
+
 ```
 
 ### Brute-Force
 
 ```ts {include="bruteforce.ts"}
+
 ```

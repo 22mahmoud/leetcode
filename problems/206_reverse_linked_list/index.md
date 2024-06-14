@@ -47,4 +47,11 @@ description: |
 ### Optimal
 
 ```ts {include="index.ts"}
+
+```
+
+### Recursion
+
+```ts {include="recursion.ts"}
+
 ```

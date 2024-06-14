@@ -7,35 +7,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Git
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: Run script to generate file
-      run: |
-        chmod +x ./bin/problems_index
-        ./bin/problems_index
-      
-    - name: Check for changes
-      id: changes
-      run: |
-        if git diff --quiet; then
-          echo "No changes to commit"
-          echo "::set-output name=changes::false"
-        else
-          echo "Changes detected"
-          echo "::set-output name=changes::true"
-        fi
+      - name: Run script to generate file
+        run: |
+          chmod +x ./bin/problems_index
+          ./bin/problems_index
 
-    - name: Commit and push changes
-      if: steps.changes.outputs.changes == 'true'
-      run: |
-        git add .
-        git commit -m 'Add generated index.md'
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            echo "::set-output name=changes::false"
+          else
+            echo "Changes detected"
+            echo "::set-output name=changes::true"
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changes == 'true'
+        run: |
+          git add .
+          git commit -m 'Add generated index.md'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

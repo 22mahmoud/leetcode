@@ -2,7 +2,7 @@ name: Update Submodule in maw.sh
 
 on:
   workflow_run:
-    workflows: ["Generate and Commit File"]
+    workflows: ['Generate and Commit File']
     types:
       - completed
 
@@ -30,7 +30,7 @@ jobs:
           git submodule update --remote --init --recursive
           git add .
           git commit -m "Update submodule"
-          
+
       - name: Push changes
         env:
           REPO_URL: https://22mahmoud:${{ secrets.GH_TOKEN }}@github.com/22mahmoud/maw.sh.git

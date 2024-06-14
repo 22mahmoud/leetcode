@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/product-of-array-except-self/submissio
 id: 0238
 slug: product-of-array-except-self
 title-prefix: Product of Array Except Self
-tags: 
+tags:
   - prefix-sum
 description: |
   <p>Given an integer array <code>nums</code>, return <em>an array</em> <code>answer</code> <em>such that</em> <code>answer[i]</code> <em>is equal to the product of all the elements of</em> <code>nums</code> <em>except</em> <code>nums[i]</code>.</p>
@@ -34,9 +34,11 @@ description: |
 ### Optimal
 
 ```ts {include="index.ts"}
+
 ```
 
 ### Brute-Force
 
 ```ts {include="bruteforce.ts"}
+
 ```

@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/word-search/submissions/1285332977
 id: 0079
 slug: word-search
 title-prefix: Word Search
-tags: 
+tags:
   - backtracking
 description: |
   <p>Given an <code>m x n</code> grid of characters <code>board</code> and a string <code>word</code>, return <code>true</code> <em>if</em> <code>word</code> <em>exists in the grid</em>.</p>
@@ -48,4 +48,5 @@ description: |
 ### Optimal (Backtracking)
 
 ```ts {include="index.ts"}
+
 ```

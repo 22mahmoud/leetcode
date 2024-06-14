@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/subsets/submissions/1286323116
 id: 0078
 slug: suubsets
 title-prefix: Subsets
-tags: 
+tags:
   - backtracking
 description: |
   <p>Given an integer array <code>nums</code> of <strong>unique</strong> elements, return <em>all possible</em> <span data-keyword="subset"><em>subsets</em></span> <em>(the power set)</em>.</p>
@@ -37,4 +37,5 @@ description: |
 ### Optimal (Backtracking)
 
 ```ts {include="index.ts"}
+
 ```

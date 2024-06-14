@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/maximum-subarray/submissions/128096243
 id: 0053
 slug: maximum-subarray
 title-prefix: Maximum Subarray
-tags: 
+tags:
   - kadane-algorithm
 description: |
   <p>Given an integer array <code>nums</code>, find the <span data-keyword="subarray-nonempty">subarray</span> with the largest sum, and return <em>its sum</em>.</p>
@@ -45,8 +45,9 @@ description: |
 
 ### Optimal
 
-So, to solve the maximum subarray problem, we have to use [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm) by keep track of 
+So, to solve the maximum subarray problem, we have to use [Kadane's algorithm](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm) by keep track of
 the latest max and current max until we get finish the array.
 
 ```ts {include="index.ts"}
+
 ```
