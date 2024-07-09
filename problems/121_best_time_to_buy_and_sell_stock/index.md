@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submis
 id: 0121
 slug: best-time-to-buy-and-sell-stock
 title-prefix: Best Time to Buy and Sell Stock
-tags:
+keywords:
   - two-pointers
 description: |
   <p>You are given an array <code>prices</code> where <code>prices[i]</code> is the price of a given stock on the <code>i<sup>th</sup></code> day.</p>

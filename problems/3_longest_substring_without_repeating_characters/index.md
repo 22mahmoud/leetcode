@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/longest-substring-without-repeating-ch
 id: 0003
 slug: longest-substring-without-repeating-characters
 title-prefix: Longest Substring Without Repeating Characters
-tags:
+keywords:
   - sliding-window
 description: |
   <p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword="substring-nonempty"><strong>substring</strong></span> without repeating characters.</p>

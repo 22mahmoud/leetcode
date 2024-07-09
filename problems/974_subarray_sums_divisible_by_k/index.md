@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/subarray-sums-divisible-by-k/submissio
 id: 0974
 slug: subarray-sums-divisible-by-k
 title-prefix: Subarray Sums Divisible by K
-tags:
+keywords:
   - prefix-sum
 description: |
   <p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the number of non-empty <strong>subarrays</strong> that have a sum divisible by </em><code>k</code>.</p>

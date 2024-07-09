@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/find-common-characters/submissions/127
 id: 1002
 slug: find-common-characters
 title-prefix: Find Common Characters
-tags:
+keywords:
   - hash-table
 description: |
   <p>Given a string array <code>words</code>, return <em>an array of all characters that show up in all strings within the </em><code>words</code><em> (including duplicates)</em>. You may return the answer in <strong>any order</strong>.</p>

@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/generate-parentheses/submissions/12875
 id: 0022
 slug: generate-parentheses
 title-prefix: Generate Parentheses
-tags:
+keywords:
   - backtracking
 description: |
   <p>Given <code>n</code> pairs of parentheses, write a function to <em>generate all combinations of well-formed parentheses</em>.</p>

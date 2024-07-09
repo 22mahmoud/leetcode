@@ -48,7 +48,7 @@ create_markdown() {
 ---
 date: 
 submission: https://leetcode.com/problems/$title_slug/submissions/
-tags:
+keywords:
 ---
 EOF
     echo "index.md created successfully!"

@@ -4,7 +4,7 @@ submission: https://leetcode.com/problems/continuous-subarray-sum/submissions/12
 id: 0523
 slug: continuous-subarray-sum
 title-prefix: Continuous Subarray Sum
-tags:
+keywords:
   - prefix-sum
 description: |
   <p>Given an integer array nums and an integer k, return <code>true</code> <em>if </em><code>nums</code><em> has a <strong>good subarray</strong> or </em><code>false</code><em> otherwise</em>.</p>
