@@ -39,7 +39,8 @@ update_metadata() {
 }
 
 slugify() {
-  echo "$1" | sed "s/-/_/g"
+  echo "$1"
+  # echo "$1" | sed "s/-/_/g"
 }
 
 create_markdown() {
