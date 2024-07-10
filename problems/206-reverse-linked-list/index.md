@@ -7,6 +7,7 @@ keywords:
 id: 0206
 slug: reverse-linked-list
 title-prefix: Reverse Linked List
+leetcode-template: true
 description: |
   <p>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>
 

@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 id: 0017
 slug: letter-combinations-of-a-phone-number
 title-prefix: Letter Combinations of a Phone Number
+leetcode-template: true
 keywords:
   - backtracking
 description: |

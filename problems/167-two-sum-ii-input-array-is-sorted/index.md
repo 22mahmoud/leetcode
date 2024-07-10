@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submi
 id: 0167
 slug: two-sum-ii-input-array-is-sorted
 title-prefix: Two Sum II - Input Array Is Sorted
+leetcode-template: true
 keywords:
   - two-pointers
 description: |

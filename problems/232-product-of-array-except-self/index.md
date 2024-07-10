@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/product-of-array-except-self/submissio
 id: 0238
 slug: product-of-array-except-self
 title-prefix: Product of Array Except Self
+leetcode-template: true
 keywords:
   - prefix-sum
 description: |

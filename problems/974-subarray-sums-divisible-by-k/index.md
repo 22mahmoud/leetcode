@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/subarray-sums-divisible-by-k/submissio
 id: 0974
 slug: subarray-sums-divisible-by-k
 title-prefix: Subarray Sums Divisible by K
+leetcode-template: true
 keywords:
   - prefix-sum
 description: |

@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/longest-palindrome/submissions/1277911
 id: 0409
 slug: longest-palindrome
 title-prefix: Longest Palindrome
+leetcode-template: true
 keywords:
   - hash-table
 description: |

@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submis
 id: 0121
 slug: best-time-to-buy-and-sell-stock
 title-prefix: Best Time to Buy and Sell Stock
+leetcode-template: true
 keywords:
   - two-pointers
 description: |

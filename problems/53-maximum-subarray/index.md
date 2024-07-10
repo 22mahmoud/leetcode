@@ -4,6 +4,7 @@ submission: https://leetcode.com/problems/maximum-subarray/submissions/128096243
 id: 0053
 slug: maximum-subarray
 title-prefix: Maximum Subarray
+leetcode-template: true
 keywords:
   - kadane-algorithm
 description: |

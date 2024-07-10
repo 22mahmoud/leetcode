@@ -47,8 +47,9 @@ create_markdown() {
   if [ ! -f "$md_file" ]; then
     cat <<EOF >"$md_file"
 ---
-date: 
+date:
 submission: https://leetcode.com/problems/$title_slug/submissions/
+leetcode-template: true
 keywords:
 ---
 EOF
