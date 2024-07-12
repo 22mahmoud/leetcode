@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/word-search/submissions/1285332977
 id: 0079
 slug: word-search
 title-prefix: Word Search
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - backtracking
 description: |

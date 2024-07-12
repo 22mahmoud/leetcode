@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/minimum-size-subarray-sum/submissions/
 id: 0209
 slug: minimum-size-subarray-sum
 title-prefix: Minimum Size Subarray Sum
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - two-pointers
   - sliding-window

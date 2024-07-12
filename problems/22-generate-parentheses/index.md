@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/generate-parentheses/submissions/12875
 id: 0022
 slug: generate-parentheses
 title-prefix: Generate Parentheses
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - backtracking
 description: |

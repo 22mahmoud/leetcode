@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/find-common-characters/submissions/127
 id: 1002
 slug: find-common-characters
 title-prefix: Find Common Characters
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - hash-table
 description: |

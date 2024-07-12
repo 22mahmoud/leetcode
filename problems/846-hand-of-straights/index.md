@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/hand-of-straights/submissions/12800037
 id: 0846
 slug: hand-of-straights
 title-prefix: Hand of Straights
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - hash-map
   - min-heap

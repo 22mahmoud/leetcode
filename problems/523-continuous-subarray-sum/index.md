@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/continuous-subarray-sum/submissions/12
 id: 0523
 slug: continuous-subarray-sum
 title-prefix: Continuous Subarray Sum
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - prefix-sum
 description: |

@@ -4,7 +4,8 @@ submission: https://leetcode.com/problems/subsets/submissions/1286323116
 id: 0078
 slug: suubsets
 title-prefix: Subsets
-leetcode-template: true
+template:
+  leetcode: true
 keywords:
   - backtracking
 description: |
